@@ -10,9 +10,15 @@ import UIKit
 
 class LightsTableViewCell: UITableViewCell {
 
+    @IBOutlet var lightPositionLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //lightPositionLabel?.text = "Sambarou"
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
