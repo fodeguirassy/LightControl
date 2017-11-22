@@ -12,9 +12,11 @@ class LightsViewController: UIViewController {
     
     @IBOutlet weak var lightsTableView: UITableView!
     
-    let lights: [Light] = [Light(position:"Room", isOn:false), Light(position:"Living Room", isOn:false),
-        Light(position:"Hall", isOn:false),
-        Light(position:"Chiken", isOn:false)]
+    let lights: [Light] = [Light(position:"Room", isOn:false, lightName:"light_off"),
+                           Light(position:"Living Room",isOn:false, lightName:"light_off"),
+                           Light(position:"Hall", isOn:false, lightName:"light_off"),
+                           Light(position:"Chiken", isOn:false, lightName:"light_off")]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +40,19 @@ extension LightsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? LightsTableViewCell else {
             fatalError("FUCKEDDDD UP IOS DEVELOPPING")
         }
-        
         cell.lightPositionLabel.text = lights[indexPath.row].position
+        //cell.lightImage.image = UIImage(named: lights[indexPath.row].lightName)
+        
         return cell
-    
     }
 
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
-    
+    @objc func switchChanged(switch: UISwitch){}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 }
 

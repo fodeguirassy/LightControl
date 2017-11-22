@@ -11,20 +11,23 @@ import UIKit
 class LightsTableViewCell: UITableViewCell {
 
     @IBOutlet var lightPositionLabel: UILabel!
-    
+    @IBOutlet weak var lightImage: UIImageView!
+    @IBOutlet weak var lightSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //lightPositionLabel?.text = "Sambarou"
-        // Initialization code
-        
     }
 
+    @IBAction func touchSwitchLight(_ sender: Any) {
+        if(lightSwitch.isOn){
+            self.lightImage.image = UIImage(named:"light_on.png")
+        }else{
+            self.lightImage.image = UIImage(named:"light_off.png")
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

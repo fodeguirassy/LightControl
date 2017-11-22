@@ -32,12 +32,17 @@
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="45e-Jv-L7w">
                         <rect key="frame" x="238" y="112" width="49" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="touchSwitchLight:" destination="KGk-i7-Jjw" eventType="valueChanged" id="tlV-9Y-PYs"/>
+                        </connections>
                     </switch>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lightImage" destination="CZz-nq-0DQ" id="LVw-mk-Mgq"/>
                 <outlet property="lightPositionLabel" destination="6Wr-WA-Vio" id="Qgk-q6-F6G"/>
+                <outlet property="lightSwitch" destination="45e-Jv-L7w" id="A6l-Te-gbj"/>
             </connections>
             <point key="canvasLocation" x="93.5" y="127"/>
         </tableViewCell>
