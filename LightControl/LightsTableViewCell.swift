@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class LightsTableViewCell: UITableViewCell {
 
     @IBOutlet var lightPositionLabel: UILabel!
     @IBOutlet weak var lightImage: UIImageView!
     @IBOutlet weak var lightSwitch: UISwitch!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

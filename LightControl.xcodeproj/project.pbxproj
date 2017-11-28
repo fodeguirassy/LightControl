@@ -17,9 +17,11 @@
 		4CA1D9991FC30E720079B677 /* light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1D9971FC30E720079B677 /* light_off.png */; };
 		4CA1D9A41FC345780079B677 /* LightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1D9A21FC345780079B677 /* LightsTableViewCell.swift */; };
 		4CA1D9A51FC345780079B677 /* LightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1D9A31FC345780079B677 /* LightsTableViewCell.xib */; };
+		F78988139028F9B9015851EE /* Pods_LightControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAD0177A4467825E574D775 /* Pods_LightControl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17134B6F1CBF5587AD74B789 /* Pods-LightControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LightControl/Pods-LightControl.debug.xcconfig"; sourceTree = "<group>"; };
 		4C36A1F11FC2D2EE0071B7C9 /* LightControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C36A1F41FC2D2EE0071B7C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C36A1FB1FC2D2EE0071B7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		4CA1D9971FC30E720079B677 /* light_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_off.png; path = ../../../../../../light_off.png; sourceTree = "<group>"; };
 		4CA1D9A21FC345780079B677 /* LightsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsTableViewCell.swift; sourceTree = "<group>"; };
 		4CA1D9A31FC345780079B677 /* LightsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightsTableViewCell.xib; sourceTree = "<group>"; };
+		7FAD0177A4467825E574D775 /* Pods_LightControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A559A6D609222238DCB2AFF /* Pods-LightControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-LightControl/Pods-LightControl.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78988139028F9B9015851EE /* Pods_LightControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41828D42B332D0CA4A02244F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17134B6F1CBF5587AD74B789 /* Pods-LightControl.debug.xcconfig */,
+				8A559A6D609222238DCB2AFF /* Pods-LightControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4C36A1E81FC2D2EE0071B7C9 = {
 			isa = PBXGroup;
 			children = (
 				4C36A1F31FC2D2EE0071B7C9 /* LightControl */,
 				4C36A1F21FC2D2EE0071B7C9 /* Products */,
+				41828D42B332D0CA4A02244F /* Pods */,
+				97BCEE12B50248EBBD95256E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +111,14 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		97BCEE12B50248EBBD95256E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FAD0177A4467825E574D775 /* Pods_LightControl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C36A2031FC2D2EE0071B7C9 /* Build configuration list for PBXNativeTarget "LightControl" */;
 			buildPhases = (
+				2462126AD7736FA75C3A9D33 /* [CP] Check Pods Manifest.lock */,
 				4C36A1ED1FC2D2EE0071B7C9 /* Sources */,
 				4C36A1EE1FC2D2EE0071B7C9 /* Frameworks */,
 				4C36A1EF1FC2D2EE0071B7C9 /* Resources */,
+				78613CABAD5C69DB825126DF /* [CP] Embed Pods Frameworks */,
+				117A40A01CF58E84CF756E4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +191,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		117A40A01CF58E84CF756E4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LightControl/Pods-LightControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2462126AD7736FA75C3A9D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LightControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78613CABAD5C69DB825126DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C36A1ED1FC2D2EE0071B7C9 /* Sources */ = {
@@ -300,9 +383,11 @@
 		};
 		4C36A2041FC2D2EE0071B7C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17134B6F1CBF5587AD74B789 /* Pods-LightControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGGMM548B8;
 				INFOPLIST_FILE = LightControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fodeguirassy.LightControl.LightControl;
@@ -314,9 +399,11 @@
 		};
 		4C36A2051FC2D2EE0071B7C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A559A6D609222238DCB2AFF /* Pods-LightControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGGMM548B8;
 				INFOPLIST_FILE = LightControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fodeguirassy.LightControl.LightControl;
