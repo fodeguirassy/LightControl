@@ -13,10 +13,11 @@
 		4C6316B81FC2D51A00C418F9 /* LightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6316B61FC2D51A00C418F9 /* LightsViewController.swift */; };
 		4C6316B91FC2D51A00C418F9 /* LightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6316B71FC2D51A00C418F9 /* LightsViewController.xib */; };
 		4CA1D9931FC30AFC0079B677 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1D9921FC30AFC0079B677 /* Light.swift */; };
-		4CA1D9981FC30E720079B677 /* light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1D9961FC30E720079B677 /* light_on.png */; };
-		4CA1D9991FC30E720079B677 /* light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1D9971FC30E720079B677 /* light_off.png */; };
 		4CA1D9A41FC345780079B677 /* LightsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1D9A21FC345780079B677 /* LightsTableViewCell.swift */; };
 		4CA1D9A51FC345780079B677 /* LightsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1D9A31FC345780079B677 /* LightsTableViewCell.xib */; };
+		BFCE653A1FD89C8C00F0EF5A /* light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE65391FD89C8B00F0EF5A /* light_off.png */; };
+		BFCE653C1FD89C9900F0EF5A /* light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCE653B1FD89C9900F0EF5A /* light_on.png */; };
+		BFCE653E1FD89F7600F0EF5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFCE653D1FD89F7500F0EF5A /* GoogleService-Info.plist */; };
 		F78988139028F9B9015851EE /* Pods_LightControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAD0177A4467825E574D775 /* Pods_LightControl.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,12 +31,13 @@
 		4C6316B61FC2D51A00C418F9 /* LightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsViewController.swift; sourceTree = "<group>"; };
 		4C6316B71FC2D51A00C418F9 /* LightsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightsViewController.xib; sourceTree = "<group>"; };
 		4CA1D9921FC30AFC0079B677 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
-		4CA1D9961FC30E720079B677 /* light_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_on.png; path = ../../../../../../light_on.png; sourceTree = "<group>"; };
-		4CA1D9971FC30E720079B677 /* light_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_off.png; path = ../../../../../../light_off.png; sourceTree = "<group>"; };
 		4CA1D9A21FC345780079B677 /* LightsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsTableViewCell.swift; sourceTree = "<group>"; };
 		4CA1D9A31FC345780079B677 /* LightsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightsTableViewCell.xib; sourceTree = "<group>"; };
 		7FAD0177A4467825E574D775 /* Pods_LightControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A559A6D609222238DCB2AFF /* Pods-LightControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-LightControl/Pods-LightControl.release.xcconfig"; sourceTree = "<group>"; };
+		BFCE65391FD89C8B00F0EF5A /* light_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light_off.png; path = LightControl/light_off.png; sourceTree = SOURCE_ROOT; };
+		BFCE653B1FD89C9900F0EF5A /* light_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light_on.png; sourceTree = "<group>"; };
+		BFCE653D1FD89F7500F0EF5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "LightControl/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		4C36A1E81FC2D2EE0071B7C9 = {
 			isa = PBXGroup;
 			children = (
+				BFCE653D1FD89F7500F0EF5A /* GoogleService-Info.plist */,
 				4C36A1F31FC2D2EE0071B7C9 /* LightControl */,
 				4C36A1F21FC2D2EE0071B7C9 /* Products */,
 				41828D42B332D0CA4A02244F /* Pods */,
@@ -80,7 +83,8 @@
 		4C36A1F31FC2D2EE0071B7C9 /* LightControl */ = {
 			isa = PBXGroup;
 			children = (
-				4CA1D9941FC30E560079B677 /* resources */,
+				BFCE65391FD89C8B00F0EF5A /* light_off.png */,
+				BFCE653B1FD89C9900F0EF5A /* light_on.png */,
 				4C36A1F41FC2D2EE0071B7C9 /* AppDelegate.swift */,
 				4C36A1FB1FC2D2EE0071B7C9 /* Assets.xcassets */,
 				4C36A1FD1FC2D2EE0071B7C9 /* LaunchScreen.storyboard */,
@@ -92,23 +96,6 @@
 				4CA1D9A31FC345780079B677 /* LightsTableViewCell.xib */,
 			);
 			path = LightControl;
-			sourceTree = "<group>";
-		};
-		4CA1D9941FC30E560079B677 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				4CA1D9951FC30E5F0079B677 /* images */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
-		4CA1D9951FC30E5F0079B677 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				4CA1D9971FC30E720079B677 /* light_off.png */,
-				4CA1D9961FC30E720079B677 /* light_on.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		97BCEE12B50248EBBD95256E /* Frameworks */ = {
@@ -181,12 +168,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CA1D9991FC30E720079B677 /* light_off.png in Resources */,
 				4C6316B91FC2D51A00C418F9 /* LightsViewController.xib in Resources */,
 				4C36A1FF1FC2D2EE0071B7C9 /* LaunchScreen.storyboard in Resources */,
-				4CA1D9981FC30E720079B677 /* light_on.png in Resources */,
+				BFCE653A1FD89C8C00F0EF5A /* light_off.png in Resources */,
 				4CA1D9A51FC345780079B677 /* LightsTableViewCell.xib in Resources */,
 				4C36A1FC1FC2D2EE0071B7C9 /* Assets.xcassets in Resources */,
+				BFCE653C1FD89C9900F0EF5A /* light_on.png in Resources */,
+				BFCE653E1FD89F7600F0EF5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,11 +222,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LightControl/Pods-LightControl-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

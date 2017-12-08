@@ -7,26 +7,32 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 
 class LightsViewController: UIViewController {
     
     @IBOutlet weak var lightsTableView: UITableView!
     
-    let lights: [Light] = [Light(position:"Room", isOn:false, lightName:"light_off"),
-                           Light(position:"Living Room",isOn:false, lightName:"light_off"),
-                           Light(position:"Hall", isOn:false, lightName:"light_off"),
-                           Light(position:"Chiken", isOn:false, lightName:"light_off")]
-
-
+    var ref: DatabaseReference!
+    
+    var lights: [Light] = [Light(position:"Room", isOn:false),
+                           Light(position:"LivingRoom",isOn:false),
+                           Light(position:"Hall", isOn:false),
+                           Light(position:"Kitchen", isOn:false)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lightsTableView.delegate = self
         self.lightsTableView.dataSource = self
-        
-        //self.lightsTableView.register(LightsTableViewCell.self, forCellReuseIdentifier: "cell")
-
         self.lightsTableView.register(UINib.init(nibName: "LightsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+    
+        self.ref = Database.database().reference()
         
+        for light in self.lights {
+            self.ref.child("light/"+light.position).setValue(["isOn": light.isOn])
+        }
+    
     }
 }
 
@@ -52,7 +58,20 @@ extension LightsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
-    @objc func switchChanged(switch: UISwitch){}
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    
+    
+    @objc func switchChanged(switch: UISwitch){
+        
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let light = self.lights[indexPath.row]
+        if(light.isOn) {
+            light.isOn = false
+        }else {
+            light.isOn = true
+        }
+        self.ref.child("/lights/"+light.position).updateChildValues(["isOn":light.isOn])
+    }
 }
 

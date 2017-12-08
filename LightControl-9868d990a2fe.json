@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lightcontrol-d2340",
+  "private_key_id": "9868d990a2fe88c6969bbc804ffa90b0e967c2ed",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDiI+ZHfHK6P7FE\nGiTGdAfGQtcfjEmrj2DvgjElyaBnSwMplFJpLpocprzoc/P15SEC9wPRY15TjqtV\nRIQb+x03xLFCWoecTRLc/vxw862ht/9nHvEQV3FLNibRtU/ZxtELAB33rAYQnYtQ\naaxyN4VIp8HYjSaTjkj+P8Oz9j4jro0LDup2mOSYIcWIHf0FMxDBADbR8Doh3NC+\nr0cgAvGAa50Q/fibkn1Kv2kPuxfNVFZm5FqfcaeHDdL7RePkFhCu4LjtKdYTWF2T\nBO4HVzz58ZZZ/MM8NYMClR6kRCafX0ceTTuv9UCDzmoIt4g20djmWJUnoERZBTaO\nc+ZkdTYPAgMBAAECggEAaVkFBYdloPtb9thhCmxyVLu9oM5HYZtVMq6Je8uOpKAO\n1JdqvuI9XByXA4lE/OfldY6iYjCy+CUODxZwnuJgbaL9WuZ2p2tGXtqQuoPifuSL\nIDyLW6wItNuAwRAAp3jV2JSQ4VjrqGDkTi00by8LMdoo1VuIPZQ6z+rfnh4YO6FM\nkKlvHUadS4MHyOxkCq24eoJoo7jOHNrQNNUztn67s7CNN9Bf1YjioxcZJH3xR0G+\nlaxXocVxo9gVobFfbw70VD9NugyYlnZrVRDtBxtvN+2ktus2cvo4DsiN8HfjoJjX\nj9ccVyGxLIWeViLFn9njubMHNTubMJv3soDat782AQKBgQD0ubDxnsQJPVqPhLO7\nAg9ReXoZWQQg7Bbh3WU/vsiR+6hIQU6ZHjNS7aGjLU4g3uSj38Ufw+ae3xIMkTn+\np6ZP7PMghp3G+vTloFg3O44uKoStLkn6CuhXbHnHyG9RD3Z8fTLK+OtX5SbdHiZd\nruGLYv+nAERNkk5efWnL3k5SAQKBgQDsjwOXZPZwPAPNmUrUuZvexZCYXvzckWbJ\nkLfJ8ezbFe1ctx7ItdwrIZSWWUzFppa5BuTke27U164VYNGUnDHgWcns7WjfxhF0\nvaQl3lERszcOfOVMcTpLkjYDtUYtrkr4iCKkwClP9afIQEHamGCh7/G/rWiUdrx5\n6CQTEI5oDwKBgBJwc16hQdAYaVxq+Ufb7d+LsaF7TY5Ve5vlHJ3i+CXXumRHV26+\nEcvrz8QFw99CLCQU1juAfT33PNrpjl8brrJS/jazLewyOIWcwUjYGexsk7agyD4o\n2DzOFZbyCUEoUxsqK8uTWdgzkewTO3zPknr4KJ8irALURUdlV7VeuLQBAoGAFv8U\nJ0yOVHzRFdSYHLPqfi6Qju90/3A3INMrursE/otUJtY6bOKZA6xhCHin6PL35gbQ\ni5GgRZqt9rARz7Obeabg5WJy9oYHvmSNJ41ELkdQy9zCYbsEIsKU86lUqC4wZZa+\nX2u62GYWKHZusHRtuHBd/Pc7mmssiWFS2HOclGsCgYEAtqBRaUCRO4s1aCvQ3jQW\nVHkZVLj+2P3luVgBmiNwcUa+wzln2+qjeBcYcthOKmXfn1+4X9EIkNeAnUuDiEVo\n2FRoqe+Hsp0Wn5UP/Byjh9HGbS0CCr/iY464Wc0evSKDVjmA5NFtmrUCFonjk5zo\nZZLMxb3JLMXZPk6du+5Omp8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lightcontrol-d2340@appspot.gserviceaccount.com",
+  "client_id": "115053602424095350110",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lightcontrol-d2340%40appspot.gserviceaccount.com"
+}

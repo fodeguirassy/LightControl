@@ -12,12 +12,11 @@ class Light {
     
     let position: String
     var isOn: Bool
-    var lightName: String
+
     
-    init(position: String, isOn: Bool, lightName: String) {
+    init(position: String, isOn: Bool) {
         self.position = position
         self.isOn = isOn
-        self.lightName = lightName
     }
 
 }

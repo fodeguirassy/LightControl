@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
 
 class LightsTableViewCell: UITableViewCell {
 
@@ -16,16 +18,28 @@ class LightsTableViewCell: UITableViewCell {
     @IBOutlet weak var lightSwitch: UISwitch!
     
     
+    var ref: DatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 
     @IBAction func touchSwitchLight(_ sender: Any) {
+        
+        self.ref = Database.database().reference()
+        
+        guard
+            let positionText = self.lightPositionLabel.text else {
+                return
+        }
+        
         if(lightSwitch.isOn){
             self.lightImage.image = UIImage(named:"light_on.png")
+            self.ref.child("light").updateChildValues(["/"+positionText: ["isOn": true]])
         }else{
             self.lightImage.image = UIImage(named:"light_off.png")
+            self.ref.child("light").updateChildValues(["/"+positionText: ["isOn": false]])
         }
     }
     
