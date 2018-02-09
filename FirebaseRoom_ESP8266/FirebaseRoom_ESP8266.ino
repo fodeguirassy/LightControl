@@ -20,9 +20,17 @@
 #include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
 
+#include<pgmspace.h>
+
+
 // Set these to run example.
 #define FIREBASE_HOST "lightcontrol-d2340.firebaseio.com"
 #define FIREBASE_AUTH "ktmYEDC2sL5HmRRYDW2zCG6Ok0nWgs0rV3VMiDCJ"
+/*
+ * ESGI Reseau-GES
+ * Livebox-DB06
+ * 0E067429EEF461666CC5920853
+ */
 #define WIFI_SSID "ESGI"
 #define WIFI_PASSWORD "Reseau-GES"
 
@@ -57,37 +65,62 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  Serial.print("Firebase connection status is ");
+  //Serial.print("Firebase connection status is ");
 
-  //Firebase.stream("light/Room");
+  String roomLightOnStringRaw  = "Please validate you have just turned on room light"; 
+  PGM_P roomLightOnString = PSTR("Please validate you have just turned on room light");
+  char buffer [roomLightOnStringRaw.length()];
   
-  Firebase.setBool("light/Room/isOn", false);
+  strncpy_P(buffer, roomLightOnString, roomLightOnStringRaw.length());
 
+  String test = String(buffer);
+    
+  //Serial.println(strncpy_P(buffer, roomLightOnString, 30));    
+  char currentChar;
+  for(int i = 0; i < test.length(); i++) {
+    currentChar = test.charAt(i);
+    if(isAlpha(currentChar) == false && isWhitespace(currentChar) == false) {
+      //test.setCharAt(i,'Y');
+      
+      test.remove(test.indexOf(currentChar)); 
+    }  
+  }
   
- // Firebase.set("pushbutton", 0);
- // Firebase.set("sunlight", 0);
- // Firebase.set("redlight", 0);
- // Firebase.set("cooldown", 0);
- // Firebase.set("brrr", 0);
+  Serial.println("\nbuffer value is : ");
+  Serial.println(test);
+ 
 }
 
 int button = 0;
 float light = 0.0;
 
 void loop() {
-  //digitalWrite(ledPin, Firebase.getInt("redlight"));
-  //digitalWrite(fanPin, Firebase.getInt("cooldown"));
-  //digitalWrite(vibratorPin, Firebase.getInt("brrr"));
-  //int newButton = digitalRead(buttonPin);
-  //if (newButton != button) {
-    //button = newButton;
-    //Firebase.setInt("pushbutton", button);
-  //}
-  //float newLight = analogRead(lightSensorPin);
-  //if (abs(newLight - light) > 100) {
-   // light = newLight;
-   // Firebase.setFloat("sunlight", light);
-  //}
+
+   if (Firebase.getBool("light/Room/isOn") == false) {
+      digitalWrite(D1, LOW);
+   }else {
+      digitalWrite(D1, HIGH);
+   }
+  
+   
+   /*
+   if (Firebase.getBool("light/LivingRoom/isOn") == false) {
+      digitalWrite(D1, LOW);
+   }else {
+      digitalWrite(D1, HIGH);
+   }
+    
+   if (Firebase.getBool("light/Hall/isOn") == false) {
+      digitalWrite(D1, LOW);
+   }else {
+      digitalWrite(D1, HIGH);
+   }
+   
+   if (Firebase.getBool("light/Kitchen/isOn") == false) {
+      digitalWrite(D1, LOW);
+   }else {
+      digitalWrite(D1, HIGH);
+   }
 
 
   Serial.println("Room light state is");
@@ -98,6 +131,14 @@ void loop() {
   Serial.println(Firebase.getBool("light/Hall/isOn"));
   Serial.println("Kitchen light state is");
   Serial.println(Firebase.getBool("light/Kitchen/isOn"));
+  */
+
   
   delay(200);
 }
+
+void formatMessage(){
+
+  
+}
+
